@@ -1,0 +1,8 @@
+:root {
+  --red: #ccc;
+}
+
+i {
+  color: var(--red);
+}
+/*# sourceMappingURL=style.css.map */
