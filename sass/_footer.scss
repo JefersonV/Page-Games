@@ -1,0 +1,5 @@
+.footer {
+  &-grid {
+    @extend .header-grid;
+  }
+}
