@@ -4,4 +4,141 @@
   --white: #f3f1f2;
   --gray: #ccc;
   --background: #f9fafc;
+  --soft-red: #fa5757;
+  --soft-black: #2d324d;
+  --black: #333333;
+
+  --font-h: "Oswald", sans-serif;
+  --font-p: "Lato", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: none;
+  background: var(--background);
+  &-grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 220px 450px 1fr;
+    img {
+      padding: 0.5em 0;
+    }
+    /* icon search */
+    li {
+      justify-self: flex-end;
+      list-style: none;
+      &:hover {
+        color: var(--soft-red);
+      }
+    }
+
+    li i {
+      color: var(--violet);
+      padding: 1.5em 0;
+      &:hover {
+        color: var(--soft-red);
+      }
+    }
+    .header-search {
+      font-family: var(--font-h);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 1.5em 0;
+      color: var(--dark-blue);
+      &:hover {
+        color: var(--soft-red);
+      }
+    }
+  }
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-family: var(--font-h);
+    li a {
+      @extend .header-search;
+    }
+    li a:hover {
+      color: var(--soft-red);
+    }
+  }
+
+  &-search--icon {
+    list-style: none;
+    grid-column-start: 3;
+    justify-self: flex-end;
+  }
+}
+
+/* mobile  */
+.mobile {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+}
+
+.menu-nav {
+  display: none;
+}
+
+.menu-nav {
+  ul {
+    padding: 0 1.5em;
+  }
+  ul li {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 1em 0;
+    list-style: none;
+    background-color: var(--white);
+    text-align: center;
+  }
+  ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+#check-menu {
+  display: none;
+  &:checked ~ .menu-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0 auto;
+    background: linear-gradient(
+      to bottom,
+      var(--soft-black) 0%,
+      transparent 90%
+    );
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
 }

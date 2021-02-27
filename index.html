@@ -5,17 +5,68 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/4e6f80375c.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./sass/style.css">
 </head>
 <body>
-	<i class="fas fa-comment-alt">be</i>
+
+	<header class="header">
+		<div class="wrapper" >
+			<nav class="header-grid">
+				<img src="./assets/images/logo.png" width="190px" height="53px"  alt="logo games">
+				<ul class="header-nav">
+						<li><a href="#">Playstation</a></li>
+						<li><a href="#">Xbox</a></li>
+						<li><a href="#">Nintendo</a></li>
+						<li><a href="#">Pc</a></li>
+						<li><a href="#">Mobile</a></li>
+				</ul>
+					<!-- icon search -->
+				<li>
+					<i class="fas fa-search"></i>
+					<a class="header-search" href="">Search</a>
+				</li>
+				</nav>
+		</div>
+
+	</header>
+
+
+	<!-- ***** menu mobile ****-->
+	<header class="mobile">
+		<!-- check -->
+		<input type="checkbox" name="check-menu" id="check-menu">
+		<!-- check -->
+		<div class="mobile-logo">
+			<img src="./assets/images/logo.png" width="120px" alt="logo games">
+		</div>
+		<label class="mobile-burger" for="check-menu">
+			<i class="fas fa-bars"></i>
+		</label>
+		<nav class="menu-nav">
+			<ul class="menu-list">
+				<li><a href="#">Playstation</a></li>
+				<li><a href="#">Xbox</a></li>
+				<li><a href="#">Nintendo</a></li>
+				<li><a href="#">Pc</a></li>
+				<li><a href="#">Mobile</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<!--
+	Icons 
+	<i class="fas fa-comment-alt"></i>
 	<i class="fas fa-map-marker-alt"></i>
-	<i class="fas fa-search"></i>
+
 	<i class="fas fa-bars"></i>
 	<i class="fas fa-share"></i>
 	<i class="fab fa-facebook-f"></i>
 	<i class="fab fa-instagram"></i>
 	<i class="fab fa-twitter"></i>
 	<i class="fab fa-pinterest"></i>
+ -->
 </body>
 </html>
