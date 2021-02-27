@@ -19,7 +19,7 @@
   background: var(--background);
 }
 
-.header-grid, .footer-grid {
+.header-grid {
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -30,29 +30,29 @@
   /* icon search */
 }
 
-.header-grid img, .footer-grid img {
+.header-grid img {
   padding: 0.5em 0;
 }
 
-.header-grid li, .footer-grid li {
+.header-grid li {
   justify-self: flex-end;
   list-style: none;
 }
 
-.header-grid li:hover, .footer-grid li:hover {
+.header-grid li:hover {
   color: var(--soft-red);
 }
 
-.header-grid li i, .footer-grid li i {
+.header-grid li i {
   color: var(--violet);
   padding: 1.5em 0;
 }
 
-.header-grid li i:hover, .footer-grid li i:hover {
+.header-grid li i:hover {
   color: var(--soft-red);
 }
 
-.header-grid .header-search, .footer-grid .header-search, .header-grid .header-nav li a, .header-nav li .header-grid a, .footer-grid .header-nav li a, .header-nav li .footer-grid a {
+.header-grid .header-search, .header-grid .header-nav li a, .header-nav li .header-grid a {
   font-family: var(--font-h);
   text-decoration: none;
   text-transform: uppercase;
@@ -61,7 +61,7 @@
   color: var(--dark-blue);
 }
 
-.header-grid .header-search:hover, .footer-grid .header-search:hover, .header-grid .header-nav li a:hover, .header-nav li .header-grid a:hover, .footer-grid .header-nav li a:hover, .header-nav li .footer-grid a:hover {
+.header-grid .header-search:hover, .header-grid .header-nav li a:hover, .header-nav li .header-grid a:hover {
   color: var(--soft-red);
 }
 
@@ -309,6 +309,127 @@
 .news-aside-btn:hover {
   background: var(--white);
   color: var(--violet);
+}
+
+.footer {
+  background: var(--black);
+}
+
+.footer-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 120px 50px;
+      grid-template-rows: 120px 50px;
+      grid-template-areas: "image nav" "icons icons";
+}
+
+.footer-grid img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footer-grid ul {
+  display: block;
+  list-style: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.footer-grid ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 1em;
+  color: var(--white);
+}
+
+.footer-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: icons;
+}
+
+.footer-icons p {
+  color: var(--white);
+}
+
+.footer-icons a {
+  padding-left: 1.5em;
+}
+
+.footer-icons a i {
+  color: var(--white);
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-grid {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-columns: 220px 450px 1fr;
+        grid-template-columns: 220px 450px 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-area: auto;
+  }
+  .footer-grid img {
+    margin: 1em 0;
+  }
+  .footer-grid ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer-grid ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1.5em 1em;
+    color: var(--white);
+  }
+  .footer-grid ul li a:hover {
+    color: var(--soft-red);
+  }
+  .footer-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    grid-area: auto;
+    justify-self: flex-end;
+  }
+  .footer-icons p {
+    color: var(--white);
+  }
+  .footer-icons a {
+    padding-left: 1.5em;
+  }
+  .footer-icons a i {
+    color: var(--white);
+    padding: 1.5em 0;
+  }
+  .footer-icons a i:hover {
+    color: var(--soft-red);
+  }
 }
 
 /* generals utilities */
