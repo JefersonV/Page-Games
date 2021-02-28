@@ -252,6 +252,7 @@
 
 .news-item-icons i {
   color: var(--white);
+  padding-left: 4em;
 }
 
 .news-item--2 {
@@ -314,7 +315,7 @@
 
 @media screen and (min-width: 1024px) {
   .hero {
-    height: 1400px;
+    height: 1320px;
   }
   .hero-grid {
     -ms-grid-columns: (1fr)[4];
@@ -331,6 +332,12 @@
     grid-area: hero;
     height: 100%;
   }
+  .hero-description h1, .news-item-description h1 {
+    font-size: 2.1em;
+  }
+  .hero-description p, .news-item-description p {
+    font-size: 1.2em;
+  }
   .news {
     -ms-grid-row: 3;
     -ms-grid-row-span: 2;
@@ -338,12 +345,19 @@
     grid-area: artic2;
     height: 100%;
   }
+  .news-item-description h3 {
+    font-size: 1.8em;
+  }
   .news-aside {
+    padding: 3em;
     -ms-grid-row: 2;
     -ms-grid-row-span: 2;
     -ms-grid-column: 4;
     grid-area: artic1;
-    height: 90%;
+    height: 85%;
+  }
+  .news-aside p {
+    font-size: 1.2em;
   }
   .grid-item--1 {
     -ms-grid-row: 1;
