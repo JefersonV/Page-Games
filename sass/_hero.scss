@@ -1,10 +1,11 @@
 .hero {
   width: 100%;
   /*sugerencia: height: 1300px; para desktop*/
-  height: 2500px;
+  height: 2700px;
   /*  border: 1px solid red; */
   &-grid {
     display: grid;
+    gap: 1.5em;
   }
   &-image {
     background: url("../assets/images/hero-image.jpg") center no-repeat;
@@ -126,6 +127,50 @@
     &:hover {
       background: var(--white);
       color: var(--violet);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    height: 1400px;
+    &-grid {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas:
+        "hero hero hero new1"
+        "hero hero hero artic1"
+        "artic2 new2 new2 artic1"
+        "artic2 new3 new4 new5";
+    }
+    &-image {
+      grid-area: hero;
+      height: 100%;
+    }
+  }
+  .news {
+    grid-area: artic2;
+    height: 100%;
+  }
+  .news-aside {
+    grid-area: artic1;
+    height: 90%;
+  }
+  .grid-item {
+    &--1 {
+      grid-area: new1;
+    }
+    &--2 {
+      grid-area: new2;
+    }
+    &--3 {
+      grid-area: new3;
+    }
+    &--4 {
+      grid-area: new4;
+    }
+    &--5 {
+      grid-area: new5;
     }
   }
 }

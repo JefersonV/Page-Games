@@ -156,13 +156,14 @@
 .hero {
   width: 100%;
   /*sugerencia: height: 1300px; para desktop*/
-  height: 2500px;
+  height: 2700px;
   /*  border: 1px solid red; */
 }
 
 .hero-grid {
   display: -ms-grid;
   display: grid;
+  gap: 1.5em;
 }
 
 .hero-image, .news-item-image {
@@ -311,8 +312,70 @@
   color: var(--violet);
 }
 
+@media screen and (min-width: 1024px) {
+  .hero {
+    height: 1400px;
+  }
+  .hero-grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "hero hero hero new1" "hero hero hero artic1" "artic2 new2 new2 artic1" "artic2 new3 new4 new5";
+  }
+  .hero-image, .news-item-image {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: hero;
+    height: 100%;
+  }
+  .news {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: artic2;
+    height: 100%;
+  }
+  .news-aside {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 4;
+    grid-area: artic1;
+    height: 90%;
+  }
+  .grid-item--1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: new1;
+  }
+  .grid-item--2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: new2;
+  }
+  .grid-item--3 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: new3;
+  }
+  .grid-item--4 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+    grid-area: new4;
+  }
+  .grid-item--5 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+    grid-area: new5;
+  }
+}
+
 .footer {
   background: var(--black);
+  margin-top: -1.8em;
 }
 
 .footer-grid {
