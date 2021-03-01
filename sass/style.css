@@ -108,6 +108,7 @@
 
 .menu-nav ul {
   padding: 0 1.5em;
+  margin-top: 1em;
 }
 
 .menu-nav ul li {
@@ -156,7 +157,7 @@
 .hero {
   width: 100%;
   /*sugerencia: height: 1300px; para desktop*/
-  height: 2700px;
+  height: 2670px;
   /*  border: 1px solid red; */
 }
 
@@ -169,6 +170,8 @@
 .hero-image, .news-item-image {
   background: url("../assets/images/hero-image.jpg") center no-repeat;
   background-size: cover;
+  background-color: #646464;
+  background-blend-mode: overlay;
   /* filter: brightness(80%); */
   height: 350px;
 }
@@ -207,6 +210,10 @@
   text-decoration: none;
 }
 
+.news a p:hover {
+  text-decoration: underline;
+}
+
 .news h2 {
   text-align: left;
   color: var(--black);
@@ -225,6 +232,8 @@
   height: 300px;
   background: url("../assets/images/hero-2.jpg") center no-repeat;
   background-size: cover;
+  background-color: #505050;
+  background-blend-mode: overlay;
 }
 
 .news-item-description {
@@ -259,24 +268,32 @@
   height: 300px;
   background: url("../assets/images/news.jpg") left no-repeat;
   background-size: cover;
+  background-color: #505050;
+  background-blend-mode: overlay;
 }
 
 .news-item--3 {
   height: 300px;
   background: url("../assets/images/news-2.jpg") center no-repeat;
   background-size: cover;
+  background-color: #505050;
+  background-blend-mode: overlay;
 }
 
 .news-item--4 {
   height: 300px;
   background: url("../assets/images/news-3.jpg") center no-repeat;
   background-size: cover;
+  background-color: #505050;
+  background-blend-mode: overlay;
 }
 
 .news-item--5 {
   height: 300px;
   background: url("../assets/images/news-4.jpg") center no-repeat;
   background-size: cover;
+  background-color: #505050;
+  background-blend-mode: overlay;
 }
 
 /* aside */
@@ -315,7 +332,7 @@
 
 @media screen and (min-width: 1024px) {
   .hero {
-    height: 1320px;
+    height: 1280px;
   }
   .hero-grid {
     -ms-grid-columns: (1fr)[4];
@@ -389,7 +406,6 @@
 
 .footer {
   background: var(--black);
-  margin-top: -1.8em;
 }
 
 .footer-grid {
@@ -454,6 +470,9 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .footer {
+    margin-top: 1em;
+  }
   .footer-grid {
     display: -ms-grid;
     display: grid;

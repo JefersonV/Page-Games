@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   /*sugerencia: height: 1300px; para desktop*/
-  height: 2700px;
+  height: 2670px;
   /*  border: 1px solid red; */
   &-grid {
     display: grid;
@@ -10,6 +10,9 @@
   &-image {
     background: url("../assets/images/hero-image.jpg") center no-repeat;
     background-size: cover;
+    background-color: rgb(100, 100, 100);
+    background-blend-mode: overlay;
+
     /* filter: brightness(80%); */
     height: 350px;
     h3 span {
@@ -34,7 +37,11 @@
   color: var(--black);
   a {
     text-decoration: none;
+    p:hover {
+      text-decoration: underline;
+    }
   }
+
   h2 {
     text-align: left;
     color: var(--black);
@@ -54,6 +61,8 @@
       height: 300px;
       background: url("../assets/images/hero-2.jpg") center no-repeat;
       background-size: cover;
+      background-color: rgb(80, 80, 80);
+      background-blend-mode: overlay;
     }
     &-description {
       @extend .hero-description;
@@ -85,21 +94,29 @@
     height: 300px;
     background: url("../assets/images/news.jpg") left no-repeat;
     background-size: cover;
+    background-color: rgb(80, 80, 80);
+    background-blend-mode: overlay;
   }
   &-item--3 {
     height: 300px;
     background: url("../assets/images/news-2.jpg") center no-repeat;
     background-size: cover;
+    background-color: rgb(80, 80, 80);
+    background-blend-mode: overlay;
   }
   &-item--4 {
     height: 300px;
     background: url("../assets/images/news-3.jpg") center no-repeat;
     background-size: cover;
+    background-color: rgb(80, 80, 80);
+    background-blend-mode: overlay;
   }
   &-item--5 {
     height: 300px;
     background: url("../assets/images/news-4.jpg") center no-repeat;
     background-size: cover;
+    background-color: rgb(80, 80, 80);
+    background-blend-mode: overlay;
   }
 }
 /* aside */
@@ -134,7 +151,7 @@
 
 @media screen and (min-width: 1024px) {
   .hero {
-    height: 1320px;
+    height: 1280px;
     &-grid {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(4, 1fr);
