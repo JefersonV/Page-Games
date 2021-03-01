@@ -1,1 +1,1 @@
-# Single Page about news games
+# Single Page about games news
